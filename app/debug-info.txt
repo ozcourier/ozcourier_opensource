@@ -1,0 +1,42 @@
+
+GetProducts return:
+(2) [{…}, {…}]
+0
+:
+{currency:"AUD",
+description:"1111",
+price:"$0.99",
+priceAsDecimal:0.99,
+productId:"au.com.ozcourier.iaptest.amount",
+title:"jobs count (OZ Courier 2)"
+}
+
+
+
+Buy Result 1:
+{code:-6
+errorCode:-6
+message:"Could not complete purchase"
+response:-1003
+text:"Signature verification failed for sku android.test.purchased (response: -1003:Purchase signature verification failed)"
+}
+
+{
+code:-9
+errorCode:-9
+message:"Item already owned"
+response:7
+text:"Unable to buy item (response: 7:Item Already Owned)"
+}
+
+
+Document
+'{
+   "orderId":"GPA.1234-5678-9012-34567",
+   "packageName":"com.example.app",
+   "productId":"exampleSku",
+   "purchaseTime":1345678900000,
+   "purchaseState":0,
+   "developerPayload":"bGoa+V7g/yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ",
+   "purchaseToken":"opaque-token-up-to-1000-characters"
+ }'

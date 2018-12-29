@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+          Just Delivered
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button icon-only (click)="dismiss()">
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item no-lines>
+      <p>Please confirm the delivery?</p>
+    </ion-item>
+      
+    <button ion-button block (click)="onDelivered()">Confirm</button>
+</ion-content>

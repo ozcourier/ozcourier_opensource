@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>
+        My Address GEO
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div id="map_extend_add_geo_canvas">
+      <ion-searchbar #searchbar placeholder="input address or click on map"></ion-searchbar>
+    </div>
+  
+    <button ion-button block (click)="onConfirm()">Confirm</button>
+</ion-content>

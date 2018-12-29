@@ -1,0 +1,66 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Job</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-grid no-padding class="vertical-align-content">
+      <ion-row >
+        <ion-col col-11><ion-searchbar #searchbar placeholder="input address here" [(ngModel)]='_addr'></ion-searchbar></ion-col>
+        <ion-col col-1><button no-padding ion-button (click)="selMyAddressClick()" clear [color]="isShowExtendAddr? 'danger':''">
+          <i class="fa fa-address-book fa-2x" aria-hidden="true"></i>
+        </button>
+        <ion-select hidden #sectionSelect [(ngModel)]="_extendAddr" class="full-width-select">
+            <ion-option *ngFor="let ea of _matchedExtendAddr" [value]='ea.name'>{{ea.name}}</ion-option>
+        </ion-select>
+      </ion-col>
+      </ion-row>
+  </ion-grid>
+
+  <ion-list no-padding>
+
+  <ion-item *ngIf="''!= _extendAddr">
+    <ion-label fixed text-wrap>My Addr</ion-label>
+    <ion-input #myAddrInput type="text" [(ngModel)]="_extendAddr"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Type</ion-label>
+    <ion-select [(ngModel)]="_type" class="full-width-select">
+      <ion-option value="delivery">delivery</ion-option>
+      <ion-option value="pickup">pickup</ion-option>
+      <ion-option value="other">other</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class="item">
+    <ion-label fixed text-wrap>Notes</ion-label>
+      <ion-select multiple="true"  class="full-width-select" [(ngModel)] = "_noticeSel" placeholder="select some notes">
+        <ion-option *ngFor="let ea of _notesList" [value]='ea'>{{ea}}</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item class="item item-text-wrap">
+    <ion-label fixed text-wrap></ion-label>
+    <ion-input type="text" [(ngModel)]="_notice" placeholder="or add special notes here"></ion-input>
+  </ion-item>
+
+  <br>
+  <button ion-button block (click)="onAdd()">
+    Add
+  </button>
+  </ion-list>
+
+  <br>
+  <ion-list>
+    <ion-list-header no-lines>Job added history</ion-list-header>
+    <ion-item *ngFor="let item of _addedJobList; let i=index">
+      <ion-label><span [class.obselete]="item.status=='failed'" text-wrap>{{item['job'].address.faddr}}</span></ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

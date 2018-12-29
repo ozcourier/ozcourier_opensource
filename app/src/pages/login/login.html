@@ -1,0 +1,31 @@
+ 
+<ion-content>
+
+  <ion-item no-lines text-center>
+      <ion-img width="144" height="144" clear src="assets/imgs/icon.png"></ion-img>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>User Name</ion-label>
+    <ion-input type="text" placeholder="please input user name" #username></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Password</ion-label>
+    <ion-input type="password" placeholder="please input password" #password></ion-input>
+  </ion-item>
+
+  <div style="text-align: center">
+    <button ion-button block (click)="logIn(username, password)">Login</button>
+  </div>
+
+  <br>
+  <br>
+  <div >
+      <i>Without an account? <a (click)="onRegister()">Register</a></i>
+  </div>
+  <br>
+  <div >
+      <i>Forgot password? <a (click)="onForgot()">Reset Password</a></i>
+  </div>
+
+</ion-content>

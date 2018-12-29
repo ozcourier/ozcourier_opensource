@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+          Job Operations
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button icon-only (click)="dismiss()">
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+      <ion-label fixed>Operations</ion-label>
+      <ion-select [(ngModel)]="_operatorDropdownTitle" class="full-width-select">
+        <ion-option  *ngFor="let ar of _operatorsList" #item [value]="item.name" >{{ar.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Notes</ion-label>
+      <ion-input type="text" [(ngModel)]="_notice"></ion-input>
+    </ion-item>
+
+    <button ion-button block (click)="onOperatorUpdate()">Confirm</button>
+</ion-content>

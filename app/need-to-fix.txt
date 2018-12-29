@@ -1,0 +1,64 @@
+#添加统计页面：包括 每天包裹数/完成数 ， 总的job数， 历史job统计等  : 服务器端实现统计， App只是显示而已
+
+# 可以设置 Marker 大小/样式/颜色 等 
+# 统计最常用的1000条地址，快速匹配
+# bug fix：如果没有网络连接的情况下，添加Job后，恢复网络连接时会丢失Job
+# Add job local mode 中，去掉City选项   : 不重要， 而且分行显示更加方便
+# GEO信息获取失败后自动重新获取, 需要提示出来  : 修改为增加 Get GEO button, 同时提示有job没有
+# 一个地址多个Job时，图标显示成多Job图标
+
+
+
+#增值业务:
+
+
+
+Done:
+
+v1.0.9
+    
+# 添加包裹类型的设置        20181020
+# Add job local mode 中，address设置为clearbutton   20181020
+# 添加一键送货成功/取货成功     20181024
+# 同一个地址的多个Job中，序号从 1 开始计算
+
+
+V1.0.8
+
+v1.0.0
+#增加初始设置: 现在只需要设置地图      20180225
+
+#选择某个marker后，下面出现一个按钮来显示job的地址以及提示信息
+#增加帮助信息：每个页面都有帮助信息， 再用户安装后都设置enable,最开始的时候提示是否disable
+
+
+Not support:
+
+
+#免费版 vs  付费版
+免费版显示广告，付费版没有
+
+    //"noUnusedLocals": true,
+
+#location buttong not works
+in node_modules/@ionic-native/google-maps/index.d.ts
+add line: myLocation?: boolean; 
+export interface GoogleMapOptions {
+    /**
+     * MapType
+     */
+
+    mapType?: MapType;
+    controls?: {
+        /**
+         * Turns the compass on or off.
+         */
+        compass?: boolean;
+        /**
+         * Turns the myLocation picker on or off. If turns on this button, the application displays a permission dialog to obtain the geolocation data.
+         */
+        myLocationButton?: boolean;
+        myLocation?: boolean;
+In loading map, add options:
+    myLocation: true
+

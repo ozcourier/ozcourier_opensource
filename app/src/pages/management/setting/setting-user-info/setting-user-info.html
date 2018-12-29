@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>User Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label fixed >Username</ion-label>
+    <ion-label >{{_userName}}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed >First Name</ion-label>
+    <ion-input type="text" [(ngModel)]="_firstName" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed >Last Name</ion-label>
+    <ion-input type="text" [(ngModel)]="_lastName" ></ion-input>
+  </ion-item>
+      
+  <ion-item>
+    <ion-label fixed >Email</ion-label>
+    <ion-input type="text" [(ngModel)]="_email" ></ion-input>
+  </ion-item>
+
+</ion-content>

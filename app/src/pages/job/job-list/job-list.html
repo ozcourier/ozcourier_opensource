@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Job List</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onReloadFromServer()" icon-only>
+        <ion-icon [name]="_jobsService._isRemoteServerTodayJobLoaded? 'ios-cloud-done':'ios-cloud-download'"></ion-icon></button>
+    </ion-buttons>
+</ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-searchbar (ionInput)="getSearchItems($event)" [(ngModel)]="_searchKey"></ion-searchbar>
+  </ion-item>
+  <ion-list>
+    <button ion-item *ngFor="let item of _joblist; let i=index" (click)="itemClicked(item)">
+      <ion-label text-wrap>
+        <i class="fa {{((0 == item.address.lat) && (0 == item.address.lng))? 'fa-question': 'fa-map-marker'}}" aria-hidden="true"></i>&nbsp;&nbsp;
+        <span [class.obselete]="item.status=='open'">{{item.address.faddr}}</span></ion-label>
+    </button>
+  </ion-list>
+
+  <ion-item>
+    Total: {{_joblist.length}}
+  </ion-item>
+  <ion-item no-lines>
+    <i><span [class.obselete]="true">Red:</span>&nbsp;&nbsp;Job not finished.</i>
+  </ion-item>
+</ion-content>

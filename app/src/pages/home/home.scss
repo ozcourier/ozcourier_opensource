@@ -1,0 +1,19 @@
+page-home {
+    #map {
+        height:100%;
+      }
+    
+      ion-fab button[ion-fab] {
+        opacity: .8;
+        background-color: f4f4f4;
+      }
+      ion-icon {
+        font-size: 25px; //Preferred size here
+    }
+    .vertical-align-content > *
+    {
+        display: flex!important;
+        align-content: center!important;
+        align-items: center!important;
+    }
+}

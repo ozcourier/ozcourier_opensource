@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Addresse Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="_newExAddr.name"></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label fixed>Notes</ion-label>
+      <ion-input type="text" [(ngModel)]="_newExAddr.notes" placeholder="add special notes here"></ion-input><br>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label fixed>GEO</ion-label>
+      <ion-input type="text" value="{{this._newExAddr.lat}}:{{this._newExAddr.lng}}" readonly></ion-input><br>
+    </ion-item>
+
+    &nbsp;
+
+    <button ion-button color="secondary" block (click)="onSetGEO()">
+      Set GEO
+    </button>
+
+    &nbsp;
+    <button *ngIf="!_extendAddr" ion-button block (click)="onAdd()">
+      Add
+    </button>
+  </ion-list>
+
+</ion-content>

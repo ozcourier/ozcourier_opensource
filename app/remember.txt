@@ -1,0 +1,2 @@
+Debug on phone:
+ionic cordova run android --device

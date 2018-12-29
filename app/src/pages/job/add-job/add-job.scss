@@ -1,0 +1,18 @@
+page-add-job {
+    .full-width-select {
+        width: 100%;
+        max-width: 100%;
+      }
+    .no-padding {
+      padding: 0px !important;
+    }
+    .obselete { 
+      color: #FF0000; 
+  }
+  .vertical-align-content > *
+  {
+      display: flex!important;
+      align-content: center!important;
+      align-items: center!important;
+  }
+}

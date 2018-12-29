@@ -1,0 +1,20 @@
+<ion-content #Content>
+  <div id="map">
+    <button ion-button menuToggle clear color="dark"><ion-icon name="menu"></ion-icon></button>
+
+    <ion-fab left bottom #fab>
+        <button ion-fab mini (click)="openAddJobPage()"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
+        <!--
+        <button ion-fab mini color="dark"><ion-icon name="ios-cube" style="color:#FF4500;"></ion-icon></button>
+        <ion-fab-list side="top">
+            <button ion-fab *ngFor="let p of settingFabs" (click)="openSettingPage(fab, p)">
+                <i class="fa fa-{{p.icon}} fa-2x" aria-hidden="true"></i>
+            </button>
+        </ion-fab-list>
+    -->
+    </ion-fab>
+  </div>
+</ion-content>
+<ion-footer *ngIf="_isMapSetting">
+    <button ion-button block (click)="onMapSettingConfirm()">Confirm</button>
+</ion-footer>

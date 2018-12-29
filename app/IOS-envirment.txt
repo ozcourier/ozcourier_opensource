@@ -1,0 +1,33 @@
+1. install googlemaps / need to before add platform
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCbtCtkZWGsgeuZGMUbqS7-W2yJOg_fJCc" --variable API_KEY_FOR_IOS="AIzaSyAXsXeVcGY1q-Uug7fl6a0jnJYzPApJwLI" --no-fetch
+npm install --save @ionic-native/google-maps
+
+ionic cordova plugin add  https://github.com/mapsplugin/cordova-plugin-googlemaps#multiple_maps --variable API_KEY_FOR_ANDROID="AIzaSyCbtCtkZWGsgeuZGMUbqS7-W2yJOg_fJCc" --variable API_KEY_FOR_IOS="AIzaSyAXsXeVcGY1q-Uug7fl6a0jnJYzPApJwLI" --save --no-fetch
+
+
+2. add platform
+ionic cordova platform add ios
+
+3. install in app purchase
+ionic cordova plugin add cordova-plugin-inapppurchase
+npm install --save @ionic-native/in-app-purchase
+
+4. install app version
+ionic cordova plugin add cordova-plugin-app-version
+npm install --save @ionic-native/app-version
+
+5. install date picker
+ionic cordova plugin add cordova-plugin-datepicker
+npm install --save @ionic-native/date-picker
+
+6. install GEOLocation
+ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="To locate you"
+npm install --save @ionic-native/geolocation
+
+7. install sqlite storage
+ionic cordova plugin add cordova-sqlite-storage
+npm install --save @ionic-native/sqlite
+
+8. install ios-deploy
+sudo npm install --global --unsafe-perm ios-deploy
+

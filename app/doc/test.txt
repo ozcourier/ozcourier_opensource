@@ -1,0 +1,37 @@
+{
+    "_id": {
+        "$oid": "5aa879ecc46b4828ae514d96"
+    },
+    "driver_id": {
+        "$oid": "5a8f8b858e9d462a2c492fe7"
+    },
+    "type": "delivery",
+    "status": "open",
+    "notice": "",
+    "operates": [
+        {
+            "act": "Created",
+            "notice": "",
+            "dt": {
+                "$date": "2018-03-14T01:24:59.558Z"
+            },
+            "lat": 0,
+            "lng": 0,
+            "_id": {
+                "$oid": "5aa879ecc46b4828ae514d97"
+            }
+        }
+    ],
+    "geo_status": 1,
+    "address": {
+        "faddr": "26 Turbo Dr, Coorparoo QLD 4151, Australia",
+        "addr": "26 Turbo Dr",
+        "city": "Coorparoo",
+        "lng": 153.04832550000003,
+        "lat": -27.4923883
+    },
+    "last_modify": {
+        "$date": "2018-03-14T01:24:59.557Z"
+    },
+    "__v": 0
+}

@@ -1,0 +1,7 @@
+{
+  "name": "OZCourier-global",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,82 @@
+<ion-list >
+  
+  <ion-item-sliding>
+    <ion-item text-wrap>
+      <ion-row >
+        <ion-col col-3>Address:</ion-col>
+        <ion-col col-9>{{_job.address.faddr}}</ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item>
+      <ion-row >
+        <ion-col col-3>Type:</ion-col>
+        <ion-col col-9>{{_job.type}}</ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item>
+      <ion-row >
+        <ion-col col-3>Notes:</ion-col>
+        <ion-col col-9>{{_job.notice}}</ion-col>
+      </ion-row>    
+    </ion-item>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item>
+      <ion-row >
+        <ion-col col-3>Status:</ion-col>
+        <ion-col col-9>{{_job.status}}</ion-col>
+      </ion-row> 
+    </ion-item>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item text-wrap>
+      <ion-row >
+        <ion-col col-3>Logs:</ion-col>
+        <ion-col col-9>
+          <li *ngFor="let op of _job.operates">
+            {{op.act}} {{op.notice}} at {{op.dt | date:"dd/MM/yyyy h:mma"}}
+            {{(op.lat!==0 && op.lng!==0) ? " at " + op.lat.toFixed(7) + ", " + op.lng.toFixed(7) : ""}} 
+          </li>
+        </ion-col>
+      </ion-row> 
+    </ion-item>
+  </ion-item-sliding>
+</ion-list>
+
+<ion-list *ngIf="0 == _disableOperation">
+
+  <div *ngIf="'delivery' == _job.type">
+    <ion-row>
+      <ion-col col-6 no-padding>
+          <button ion-button full no-margin color="primary" (click)="onMoreActionClick()">More Operations</button>
+      </ion-col>
+      <ion-col col-6 no-padding >
+          <button ion-button full no-margin color="danger" (click)="onOneKeyActionClick(_oneKeyAction)">Delivery Success</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="'pickup' == _job.type">
+    <ion-row>
+      <ion-col col-6 no-padding>
+          <button ion-button full no-margin color="primary" (click)="onMoreActionClick()">More Operations</button>
+      </ion-col>
+      <ion-col col-6 no-padding >
+          <button ion-button full no-margin color="danger" (click)="onOneKeyActionClick(_oneKeyAction)">Picked Up</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="'pickup' != _job.type && 'delivery' != _job.type">
+    <button ion-button full no-margin color="primary" (click)="onMoreActionClick()">More Operations</button>
+  </div>
+
+</ion-list>
