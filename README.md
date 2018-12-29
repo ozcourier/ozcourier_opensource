@@ -26,5 +26,4 @@ export class AppConfig {
 ## Debug and Build Release:
 ```Please refer Ionic manual```
 
-## Copy right:
-```License: MIT```
+#### License: MIT
