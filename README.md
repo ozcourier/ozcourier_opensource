@@ -8,9 +8,9 @@ Requirement:<br>
 4. Ipstack key
 
 Configurations:<br>
-1: src/index.html
+1: src/index.html<br>
 <script src="https://maps.googleapis.com/maps/api/js?v=3&key=[Your Key]]&libraries=places"></script>
-<br><br>
+<br>
 2. src/app/app.config.ts<br>
 export class AppConfig {<br>
     public readonly projectName = 'OZCourier - easy delivery'<br>
