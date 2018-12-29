@@ -7,7 +7,7 @@ On Google Play Shop, Search OZCourier, you may download it and try.
 [OZCourier on Google Play Shop](https://play.google.com/store/apps/details?id=au.com.ozcourier.global&hl=en): 
 
 ## Requirement:
-* Ionic: 4.2.1  [Ionic Website](https://ionicframework.com)
+* [Ionic: 4.2.1](https://ionicframework.com)
 * Nodejs
 * Google Map Account Key
 * Ipstack key
