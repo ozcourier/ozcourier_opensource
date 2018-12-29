@@ -4,12 +4,12 @@ This is an open source App for regular courier, it'll help courier to delivery p
 ## Demo:
 ```
 On Google Play Shop, Search OZCourier, you may download it and try.
-Address: https://play.google.com/store/apps/details?id=au.com.ozcourier.global&hl=en
+[OZCourier on Google Play Shop](https://play.google.com/store/apps/details?id=au.com.ozcourier.global&hl=en): 
 ```
 
 ## Requirement:
 ```
-1. Ionic: 4.2.1  https://ionicframework.com
+1. Ionic: 4.2.1  [Ionic Website](https://ionicframework.com)
 2. Nodejs
 3. Google Map Account Key
 4. Ipstack key
