@@ -1,6 +1,12 @@
 # ozcourier opensource
 This is an open source App for regular courier, it'll help courier to delivery parcels more efficient, easier and faster.
 
+## Demo:
+```
+On Google Play Shop, Search OZCourier, you may download it and try.
+Address: https://play.google.com/store/apps/details?id=au.com.ozcourier.global&hl=en
+```
+
 ## Requirement:
 ```
 1. Ionic: 4.2.1  https://ionicframework.com
